@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Git</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Git</h1>
+                <p>
+                    <small>Nicolas Noullet - INSA
+                    </small>
+                </p>
+            </section>
+            <section>
+                <h2>Ma vie, mon oeuvre</h2>
+                <ul>
+                    <li class="fragment">INSA</li>
+                    <li class="fragment">Développeur d'
+                        <a href="https://www.icescrum.com">iceScrum</a> chez Kagilum
+                    </li>
+                    <li class="fragment">INSA (bis)</li>
+                    <li class="fragment">Formateur en agilité</li>
+                    <li class="fragment">Plus soft que hard</li>
+                </ul>
+            </section>
+            <section>
+                <h2>What the G*t???</h2>
+                <ul>
+                    <li class="fragment">Content-Addressable Storage (CAS) filesystem</li>
+                    <li class="fragment">Distributed Version Control System (DVCS)</li>
+                    <li class="fragment">Source Code Management (SCM) system</li>
+                    <li class="fragment">Directed acyclic graph (DAG)</li>
+                    <li class="fragment">Concurrent de CVS, SVN</li>
+                </ul>
+            </section>
+            <section data-background="img/confused.gif">
+            </section>
+            <section>
+                <h2>A quoi ça sert ?</h2>
+                <p>
+                    Organiser des modifications de code : les regrouper, pouvoir revenir en arrière...
+                </p>
+                <ul>
+                    <li class="fragment">Pour soi-même</li>
+                    <li class="fragment">
+                        <strong>Pour collaborer</strong>
+                    </li>
+                </ul>
+            </section>
+            <section data-background="img/team.gif">
+            </section>
+            <section>
+                <h2>Objectifs</h2>
+                <ul>
+                    <li class="fragment">Connaître les bases</li>
+                    <li class="fragment">Utiliser Git pour collaborer</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Connaître les bases</h1>
+            </section>
+            <section>
+                    <h2>Git</h2>
+                    <ul>
+                        <li class="fragment">"Google drive" du code</li>
+                        <li class="fragment">BDD + couteau suisse</li>
+                    </ul>
+                </section>
+            <section>
+                <h2>Commit</h2>
+                <ul>
+                    <li class="fragment">Parent(s)</li>
+                    <li class="fragment">ID (hash)</li>
+                    <li class="fragment">Date</li>
+                    <li class="fragment">Auteur</li>
+                    <li class="fragment">Message</li>
+                    <li class="fragment">Fichiers ajoutés / modifiés / supprimés</li>
+                </ul>
+            </section>
+            <section>
+                <h2>A savoir</h2>
+                <ul>
+                    <li class="fragment">Repository</li>
+                    <li class="fragment">Clone</li>
+                    <li class="fragment">Branche</li>
+                    <li class="fragment">Tag</li>
+                    <li class="fragment">Staging area</li>
+                    <li class="fragment">Distribué</li>
+                    <li class="fragment">.git</li>
+                    <li class="fragment">.gitignore</li>
+                </ul>
+            </section>
+            <section>
+                <h2>GitHub</h2>
+                <ul>
+                    <li class="fragment">10 ans</li>
+                    <li class="fragment">"Serveur" Git</li>
+                    <li class="fragment">Repositories Open-Source</li>
+                    <li class="fragment">Repositories privés</li>
+                    <li class="fragment">Gestionnaire de tickets</li>
+                    <li class="fragment">Wiki</li>
+                    <li class="fragment">Hébergeur</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Demo</h2>
+            </section>
+            <section>
+                <h1>Utiliser Git pour collaborer</h1>
+                <p class="fragment">y compris avec soi-même du futur</p>
+            </section>
+            <section>
+                <h2>Un bon commit</h2>
+                <ul>
+                    <li class="fragment">Bon message</li>
+                    <li class="fragment">Petit</li>
+                    <li class="fragment">Fréquent</li>
+                    <li class="fragment">Qui compile</li>
+                    <li class="fragment">Qui fonctionne</li>
+                    <li class="fragment">Relu</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Collaboration</h2>
+                <ul>
+                    <li class="fragment">Push / Pull</li>
+                    <li class="fragment">Merge</li>
+                    <li class="fragment">Rebase</li>
+                    <li class="fragment">Stash</li>
+                    <li class="fragment">Gestion des conflits</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Intégration</h2>
+                <ul>
+                    <li class="fragment">Valeur</li>
+                    <li class="fragment">Risque</li>
+                </ul>
+                <p>
+                    <img class="fragment" src="img/fail.jpg" height="350" />
+                </p>
+            </section>
+            <section>
+                <h2>Qualité</h2>
+                <ul>
+                    <li class="fragment">Code review (diff)</li>
+                    <li class="fragment">Traçabilité</li>
+                    <li class="fragment">Documentation</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Debug</h2>
+                <ul>
+                    <li class="fragment">Log</li>
+                    <li class="fragment">Blame</li>
+                    <li class="fragment">Bisect</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Demo</h2>
+            </section>
+            <section>
+                <h2>Versionning</h2>
+                <ul>
+                    <li class="fragment">Tag</li>
+                    <li class="fragment">Si pas le choix -> branche, mais vous allez souffrir !</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Trunk based development</h2>
+                <ul>
+                    <li>Favorise l'intégration au plus tôt</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Exemple de collaboration "trunk based"</h2>
+                <pre class="bash">
+                        <code>
+                        $ git stash
+                        $ git pull
+                        $ git stash pop
+                        # tests
+                        $ git status
+                        $ git diff
+                        $ git add .
+                        $ git commit -m '...'
+                        $ git push
+                        </code>
+                    </pre>
+            </section>
+            <section>
+                <h2>Open source</h2>
+                <ul>
+                    <li class="fragment">Fork</li>
+                    <li class="fragment">Pull request</li>
+                    <li class="fragment">Licence !!</li>
+                    <li class="fragment">Documentez !!!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Aller plus loin</h2>
+                <ul>
+                    <li class="fragment">Fail fast</li>
+                    <li class="fragment">Continuous integration (CI)</li>
+                    <li class="fragment">Continuous delivery (CD)</li>
+                    <li class="fragment">Feature toggle</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Feature branches / Git flow...</h2>
+            </section>
+            <section data-background="img/bad.gif">
+            </section>
+            <section>
+                <h2>Mais surtout</h2>
+                <ul>
+                    <li class="fragment">Ayez l'esprit critique (pourquoi faire ça) et ouvert (j'ai peut être tort)</li>
+                    <li class="fragment">Commencez au plus simple</li>
+                    <li class="fragment">N'ajoutez de la complexité que quand nécessaire</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Resources</h2>
+                <ul>
+                    <li class="fragment">
+                        <a href="https://git-scm.com/book/en/v2">Git book</a>
+                    </li>
+                    <li class="fragment">
+                        <a href="https://trunkbaseddevelopment.com">Trunk based development</a>
+                    </li>
+                    <li class="fragment">Pratiquez</li>
+                    <li class="fragment">Pratiquez</li>
+                    <li class="fragment">Pratiquez</li>
+
+                </ul>
+            </section>
+            <section>
+                <h2>Questions</h2>
+            </section>
+            <section data-background="img/wanted.jpg">
+            </section>
+            <section>
+                <h2>Merci :)</h2>
+                <p>
+                    <a href="https://www.icescrum.com">https://www.icescrum.com</a>
+                </p>
+                <p>
+                    <a href="http://twitter.com/noullet">@noullet</a>
+                </p>
+                <p>
+                    <a href="http://lab.hakim.se/reveal-js/">reveal-js</a>
+                </p>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+        Reveal.configure({ slideNumber: true });
+    </script>
+</body>
+
+</html>
